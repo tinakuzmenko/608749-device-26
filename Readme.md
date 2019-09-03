@@ -1,8 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Kristina Kuzmenko](https://up.htmlacademy.ru/htmlcss/26/user/608749).
-* Наставник: `Вадим Новаш`.
-
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
