@@ -11,7 +11,7 @@
     <img src="https://via.placeholder.com/163x35" alt="Логотип интернет-магазина Device" width="163" height="35">
   </a>
   <div class="header-top-row">
-    <form action="https://htmlacademy.ru" method="post">
+    <form action="https://echo.htmlacademy.ru" method="get">
       <input type="search">
       <input type="submit" value="Найти">
     </form>
@@ -33,13 +33,13 @@
   <nav class="header-nav">
     <ul class="nav-list">
       <li class="nav-item"><a href="">Каталог товаров</a>
-        <ul class="nav-catalogue-list">
-          <li class="nav-catalogue-item"><a href="">Виртуальная реальность</a></li>
-          <li class="nav-catalogue-item"><a>Моноподы для селфи</a></li>
-          <li class="nav-catalogue-item"><a href="">Экшн-камеры</a></li>
-          <li class="nav-catalogue-item"><a href="">Фитнес-браслеты</a></li>
-          <li class="nav-catalogue-item"><a href="">Умные часы</a></li>
-          <li class="nav-catalogue-item"><a href="">Квадрокоптеры</a></li>
+        <ul class="dropdown-list">
+          <li class="dropdown-item"><a href="">Виртуальная реальность</a></li>
+          <li class="dropdown-item"><a>Моноподы для селфи</a></li>
+          <li class="dropdown-item"><a href="">Экшн-камеры</a></li>
+          <li class="dropdown-item"><a href="">Фитнес-браслеты</a></li>
+          <li class="dropdown-item"><a href="">Умные часы</a></li>
+          <li class="dropdown-item"><a href="">Квадрокоптеры</a></li>
         </ul>
       </li>
       <li class="nav-item"><a href="">Доставка</a></li>
@@ -65,8 +65,8 @@
           <h3>Стоимость</h3>
           <!-- Здесь будет кастомный range для фильтра стоимости -->
         </div>
-        <div class="color">
-          <h3>Цвет</h3>
+        <fieldset class="color">
+          <legend>Цвет</legend>
           <ul>
             <li><input type="checkbox" id="black" name="item-black"><label for="black">Черный</label></li>
             <li><input type="checkbox" id="white" name="item-white"><label for="white">Белый</label></li>
@@ -74,9 +74,9 @@
             <li><input type="checkbox" id="red" name="item-red"><label for="red">Красный</label></li>
             <li><input type="checkbox" id="pink" name="item-pink"><label for="pink">Розовый</label></li>
           </ul>
-        </div>
-        <div class="bluetooth">
-          <h3>Bluetooth</h3>
+        </fieldset>
+        <fieldset class="bluetooth">
+          <legend>Bluetooth</legend>
           <ul>
             <li><input type="radio" id="with-bluetooth" name="bluetooth" value="yes" checked><label
               for="with-bluetooth">Есть</label>
@@ -84,7 +84,7 @@
             <li><input type="radio" id="without-bluetooth" name="bluetooth" value="no"><label
               for="without-bluetooth">Нет</label></li>
           </ul>
-        </div>
+        </fieldset>
         <input class="button" type="submit" value="Показать">
       </form>
     </section>
@@ -93,21 +93,21 @@
         <p class="goods-sorting-title">Сортировка:</p>
         <ul class="sorting-special-list">
           <li class="sorting-special-item">
-            <button type="button">По цене</button>
+            <button type="button" name="sort-price">По цене</button>
           </li>
           <li class="sorting-special-item">
-            <button type="button">По типу</button>
+            <button type="button" name="sort-type">По типу</button>
           </li>
           <li class="sorting-special-item">
-            <button type="button">По популярности</button>
+            <button type="button" name="sort-popularity">По популярности</button>
           </li>
         </ul>
         <ul class="sorting-up-down-list">
           <li class="sorting-up-down-item">
-            <button type="button">Вверх</button>
+            <button type="button" name="sort-up">Вверх</button>
           </li>
           <li class="sorting-up-down-item">
-            <button type="button">Вниз</button>
+            <button type="button" name="sort-down">Вниз</button>
           </li>
         </ul>
       </div>
@@ -177,13 +177,9 @@
 
       <ul class="pagination">
         <li class="pagination-item"><a class="prev" href="">Назад</a></li>
-        <li class="pagination-item">
-          <ul class="pagination-pages-list">
-            <li class="pagination-pages-item active"><a>1</a></li>
-            <li class="pagination-pages-item"><a href="">2</a></li>
-            <li class="pagination-pages-item"><a href="">3</a></li>
-          </ul>
-        </li>
+        <li class="pagination-item active"><a>1</a></li>
+        <li class="pagination-item"><a href="">2</a></li>
+        <li class="pagination-item"><a href="">3</a></li>
         <li class="pagination-item"><a class="next" href="">Вперед</a></li>
       </ul>
     </section>
