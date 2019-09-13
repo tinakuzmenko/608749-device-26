@@ -7,13 +7,13 @@
 </head>
 <body class="page">
 <header class="page-header">
-  <a href="index.html" class="logotype">
+  <a href="index.html" class="logotype" aria-label="Переход на главную страницу магазина">
     <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
   </a>
   <div class="header-top-row">
     <form action="https://echo.htmlacademy.ru" method="get">
-      <input type="search">
-      <input type="submit" value="Найти">
+      <input type="search" id="search-form" aria-label="Поиск по магазину">
+      <button type="submit">Найти</button>
     </form>
     <ul class="user-block-list">
       <li class="user-block-item">
@@ -32,10 +32,10 @@
   </div>
   <nav class="header-nav">
     <ul class="nav-list">
-      <li class="nav-item"><a href="">Каталог товаров</a>
+      <li class="nav-item"><a href="" aria-haspopup="true">Каталог товаров</a>
         <ul class="dropdown-list">
           <li class="dropdown-item"><a href="">Виртуальная реальность</a></li>
-          <li class="dropdown-item"><a>Моноподы для селфи</a></li>
+          <li class="dropdown-item" aria-current="page"><a><span class="visually-hidden">Текущий пункт:</span>Моноподы для селфи</a></li>
           <li class="dropdown-item"><a href="">Экшн-камеры</a></li>
           <li class="dropdown-item"><a href="">Фитнес-браслеты</a></li>
           <li class="dropdown-item"><a href="">Умные часы</a></li>
@@ -95,21 +95,21 @@
         <p class="goods-sorting-title">Сортировка:</p>
         <ul class="sorting-special-list">
           <li class="sorting-special-item">
-            <button type="button" name="sort-price">По цене</button>
+            <a href="">По цене</a>
           </li>
           <li class="sorting-special-item">
-            <button type="button" name="sort-type">По типу</button>
+            <a href="">По типу</a>
           </li>
           <li class="sorting-special-item">
-            <button type="button" name="sort-popularity">По популярности</button>
+            <a href="">По популярности</a>
           </li>
         </ul>
         <ul class="sorting-up-down-list">
           <li class="sorting-up-down-item">
-            <button type="button" name="sort-up">Вверх</button>
+            <a href="" aria-label="Сортировка снизу вверх">Вверх</a>
           </li>
           <li class="sorting-up-down-item">
-            <button type="button" name="sort-down">Вниз</button>
+            <a href="" aria-label="Сортировка сверху вниз">Вниз</a>
           </li>
         </ul>
       </div>
@@ -191,7 +191,7 @@
 
 <footer class="page-footer">
   <div class="footer-top-row">
-    <div class="footer-logotype">
+    <div class="footer-logotype" aria-label="Переход на главную страницу магазина">
       <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
     </div>
     <ul class="footer-user-block">
@@ -223,11 +223,11 @@
   <div class="footer-bottom-row">
     <div class="footer-decoration"></div>
     <ul class="social-list">
-      <li class="social-item facebook"><a href="">Facebook</a></li>
-      <li class="social-item instagram"><a href="">Instagram</a></li>
-      <li class="social-item twitter"><a href="">Twitter</a></li>
+      <li class="social-item facebook"><a href="" aria-label="Магазин Device на Facebook">Facebook</a></li>
+      <li class="social-item instagram"><a href="" aria-label="Магазин Device в Instagram">Instagram</a></li>
+      <li class="social-item twitter"><a href="" aria-label="Магазин Device в Twitter">Twitter</a></li>
     </ul>
-    <a class="htmlacademy-icon" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a>
+    <a class="htmlacademy-icon" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Ссылка на HTML Academy">HTML Academy</a>
   </div>
 </footer>
 
