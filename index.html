@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="page">
@@ -12,8 +13,9 @@
   </div>
   <div class="header-top-row">
     <form action="https://echo.htmlacademy.ru" method="get">
-      <input type="search" id="search-form" aria-label="Поиск по магазину">
-      <button type="submit">Найти</button>
+        <input class="search-input" type="search" id="search-form" placeholder="Поиск по сайту"
+               aria-label="Поиск по сайту">
+        <button class="search-button" type="submit">Найти</button>
     </form>
     <ul class="user-block-list">
       <li class="user-block-item">
@@ -122,22 +124,53 @@
     <h2 class="visually-hidden">Категории товаров</h2>
     <ul class="categories-list">
       <li class="categories-item">
-        <a href="">Виртуальная реальность</a>
+        <a class="categories-item-link" href="">
+          <div class="categories-item-wrapper categories-item-wrapper--vr">
+            <img class="categories-item-img" src="img/popular-1.svg" width="97" height="55"
+                 alt="Виртуальная реальность">
+          </div>
+          <p>Виртуальная реальность</p>
+        </a>
       </li>
       <li class="categories-item">
-        <a href="">Моноподы для селфи</a>
+        <a class="categories-item-link" href="catalog.html">
+          <div class="categories-item-wrapper categories-item-wrapper--monopods">
+            <img class="categories-item-img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+          </div>
+          <p>Моноподы для селфи</p>
+        </a>
       </li>
       <li class="categories-item">
-        <a href="">Экшн-камеры</a>
+        <a class="categories-item-link" href="">
+          <div class="categories-item-wrapper categories-item-wrapper--cameras">
+            <img class="categories-item-img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+          </div>
+          <p>Экшн-камеры</p>
+        </a>
       </li>
       <li class="categories-item">
-        <a href="">Фитнес-браслеты</a>
+        <a class="categories-item-link" href="">
+          <div class="categories-item-wrapper categories-item-wrapper--fitness">
+            <img class="categories-item-img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+          </div>
+          <p>Фитнес-браслеты</p>
+        </a>
       </li>
       <li class="categories-item">
-        <a href="">Умные часы</a>
+        <a class="categories-item-link" href="">
+          <div class="categories-item-wrapper categories-item-wrapper--watches">
+            <img class="categories-item-img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+          </div>
+          <p>Умные часы</p>
+        </a>
       </li>
       <li class="categories-item">
-        <a href="">Квадрокоптеры</a>
+        <a class="categories-item-link" href="">
+          <div class="categories-item-wrapper categories-item-wrapper--drones">
+            <img class="categories-item-img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+          </div>
+          <p>Квадрокоптеры</p>
+        </a>
       </li>
     </ul>
   </section>
@@ -146,13 +179,13 @@
     <h2 class="visually-hidden">Условия сотрудничества</h2>
     <ul class="conditions-controls-list">
       <li class="conditions-control">
-        <button type="button">Доставка</button>
+        <button class="button conditions-control-button active" type="button">Доставка</button>
       </li>
       <li class="conditions-control">
-        <button type="button">Гарантия</button>
+        <button class="button conditions-control-button" type="button">Гарантия</button>
       </li>
       <li class="conditions-control">
-        <button type="button">Кредит</button>
+        <button class="button conditions-control-button" type="button">Кредит</button>
       </li>
     </ul>
     <div class="conditions-wrapper">
@@ -179,16 +212,16 @@
     <h2 class="visually-hidden">Бренды товаров</h2>
     <ul class="brands-list">
       <li class="brands-item">
-        <a href="" aria-label="DJI">DJI</a>
+        <a class="brands-item-link dji" href="" aria-label="DJI">DJI</a>
       </li>
       <li class="brands-item">
-        <a href="" aria-label="SP Gadgets">SP Gadgets</a>
+        <a class="brands-item-link spg" href="" aria-label="SP Gadgets">SP Gadgets</a>
       </li>
       <li class="brands-item">
-        <a href="" aria-label="GoPro">GoPro</a>
+        <a class="brands-item-link gopro" href="" aria-label="GoPro">GoPro</a>
       </li>
       <li class="brands-item">
-        <a href="" aria-label="Vive">Vive</a>
+        <a class="brands-item-link vive" href="" aria-label="Vive">Vive</a>
       </li>
     </ul>
   </section>
@@ -204,24 +237,25 @@
         <li class="about-item">Автотрейдинг</li>
         <li class="about-item">ЖелДорЭкспедиция</li>
       </ul>
-      <a class="button" href="">Подробнее о нас</a>
+      <a class="button about-us-button" href="">Подробнее о нас</a>
     </section>
+
     <section class="contacts">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
         бывает.</p>
-      <a href="" aria-haspopup="true">
+      <a class="contacts-map" href="" aria-haspopup="true">
         <img src="img/map.jpg" alt="Карта проезда к магазину Device по адресу Москва, улица Строителей, 15"
              width="560px" height="222px">
       </a>
-      <a class="button" href="" aria-haspopup="true">Напишите нам</a>
+      <a class="button contacts-button" href="" aria-haspopup="true">Напишите нам</a>
     </section>
   </div>
 </main>
 <footer class="page-footer">
   <div class="footer-top-row">
     <div class="footer-logotype">
-      <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
+      <img src="img/logo--yellow.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
     </div>
     <ul class="footer-user-block">
       <li class="footer-user-block-item">
@@ -283,9 +317,9 @@
 
 <!-- Поп-ап карты проезда -->
 <section class="map-modal">
-    <h2>Карта проезда</h2>
-    <button type="button">Закрыть</button>
-    <!-- Здесь будет виджет карты -->
+  <h2>Карта проезда</h2>
+  <button type="button">Закрыть</button>
+  <!-- Здесь будет виджет карты -->
 </section>
 
 </body>

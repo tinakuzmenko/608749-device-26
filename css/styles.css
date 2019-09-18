@@ -1,0 +1,733 @@
+/* Шрифты */
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensanslight.woff2') format('woff2'),
+  url('../fonts/opensanslight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans.woff2') format('woff2'),
+  url('../fonts/opensans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroylight.woff2') format('woff2'),
+  url('../fonts/gilroylight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+  url('../fonts/gilroyextrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Глобальные стили */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Стилизация index.html и общих блоков сайта */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000;
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  margin-top: -5px;
+  background-color: #f0c52e;
+}
+
+.button:hover::before,
+.button:focus::before {
+  top: 0;
+  height: 40px;
+  transition: all 0.3s linear;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-header {
+  background-color: rgba(240, 192, 48, 0.50);
+}
+
+.logotype:hover,
+.logotype:focus {
+  opacity: 0.6;
+}
+
+.logotype:active {
+  opacity: 0.3;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  padding: 19px 21px;
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.15px;
+}
+
+.search-input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-input:focus {
+  border-bottom: 2px solid #000000;
+}
+
+.search-input:focus + .search-button {
+  display: inline-block;
+}
+
+.search-button {
+  display: none;
+  padding: 19px 21px;
+  border: 2px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-block-list,
+.nav-list,
+.dropdown-list,
+.categories-list,
+.conditions-controls-list,
+.brands-list,
+.about-list,
+.footer-user-block,
+.footer-nav-list,
+.social-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-block-item a,
+.nav-item a,
+.dropdown-item a {
+  color: #000000;
+}
+
+.user-block-item a:hover,
+.user-block-item a:focus,
+.nav-item a:hover,
+.nav-item a:focus,
+.dropdown-item a:hover,
+.dropdown-item a:focus {
+  opacity: 0.6;
+}
+
+.user-block-item a:active,
+.nav-item a:active,
+.dropdown-item a:active {
+  opacity: 0.3;
+}
+
+.user-block-item a {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+}
+
+.nav-item > a {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+}
+
+.dropdown-item a {
+  line-height: 2.4;
+  letter-spacing: 0.15px;
+}
+
+.slide-title {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.19;
+  letter-spacing: 0.47px;
+}
+
+.slide-description {
+  letter-spacing: 0.15px;
+  color: #464646;
+}
+
+.slide-button {
+  width: 220px;
+}
+
+.slide-details dt {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: 0.36px;
+}
+
+.slide-details dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.54;
+  letter-spacing: 0.13px;
+  color: #464646;
+}
+
+.categories-item-link {
+  display: block;
+  width: 160px;
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+}
+
+.categories-item-wrapper {
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-color: rgba(240, 192, 48, 0.50);
+  margin-bottom: 39px;
+}
+
+.categories-item-wrapper--vr {
+  padding: 52px 32px;
+}
+
+.categories-item-wrapper--monopods {
+  padding: 43px 37px 0 37px;
+}
+
+.categories-item-wrapper--cameras {
+  padding: 38px 40px 35px 49px;
+}
+
+.categories-item-wrapper--fitness {
+  padding: 50px 25px 48px 28px;
+}
+
+.categories-item-wrapper--watches {
+  padding: 32px 49px 30px 55px;
+}
+
+.categories-item-wrapper--drones {
+  padding: 49px 15px 42px 13px;
+}
+
+.categories-item-link:hover > .categories-item-wrapper,
+.categories-item-link:focus > .categories-item-wrapper {
+  background-color: #f0c52e;
+  transition: all 0.3s linear;
+}
+
+.categories-item-link:active .categories-item-img,
+.categories-item-link:active > p {
+  opacity: 0.3;
+}
+
+.conditions {
+  background-color: #e5e5e5;
+}
+
+.conditions-control-button {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  letter-spacing: 3.6px;
+}
+
+.conditions-control-button.active {
+  background-color: #000000;
+  color: #f7e184;
+  height: 40px;
+}
+
+.conditions-control-button.active::before {
+  display: none;
+}
+
+.conditions-slide h2 {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+}
+
+.conditions-slide p {
+  letter-spacing: 0.15px;
+  color: #464646;
+}
+
+.brands-item-link {
+  display: block;
+  font-size: 0;
+  width: 260px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.brands-item-link.dji {
+  background-image: url("../img/logo-1--inactive.png");
+}
+
+.brands-item-link.dji:hover,
+.brands-item-link.dji:focus {
+  background-image: url("../img/logo-1.png");
+}
+
+.brands-item-link.spg {
+  background-image: url("../img/logo-2--inactive.png");
+}
+
+.brands-item-link.spg:hover,
+.brands-item-link.spg:focus {
+  background-image: url("../img/logo-2.png");
+}
+
+.brands-item-link.gopro {
+  background-image: url("../img/logo-3--inactive.png");
+}
+
+.brands-item-link.gopro:hover,
+.brands-item-link.gopro:focus {
+  background-image: url("../img/logo-3.png");
+}
+
+.brands-item-link.vive {
+  background-image: url("../img/logo-4--inactive.png");
+}
+
+.brands-item-link.vive:hover,
+.brands-item-link.vive:focus {
+  background-image: url("../img/logo-4.png");
+}
+
+.about-us h2,
+.contacts h2 {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  position: relative;
+  padding-top: 58px;
+}
+
+.about-us h2::before,
+.contacts h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+}
+
+.about-us p,
+.contacts p {
+  color: #464646;
+}
+
+.about-item {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 2.5;
+  color: #000000;
+  padding-left: 33px;
+  position: relative;
+}
+
+.about-item::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+}
+
+.about-us-button {
+  width: 260px;
+}
+
+.contacts-map {
+  display: block;
+}
+
+.contacts-button {
+  width: 260px;
+}
+
+.page-footer {
+  background-color: #464646;
+}
+
+.footer-logotype:hover,
+.footer-logotype:focus {
+  opacity: 0.6;
+}
+
+.footer-logotype:active {
+  opacity: 0.3;
+}
+
+.page-footer a,
+.footer-paragraph {
+  color: #ffffff;
+}
+
+.footer-user-block-item a {
+  opacity: 0.7;
+}
+
+.footer-user-block-item a:hover,
+.footer-user-block-item a:focus {
+  opacity: 1;
+}
+
+.footer-user-block-item a:active {
+  opacity: 0.3;
+}
+
+.footer-nav-item a {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+}
+
+.footer-nav-item a:hover,
+.footer-nav-item a:focus {
+  opacity: 1;
+}
+
+.footer-nav-item a:active {
+  opacity: 0.3;
+}
+
+.footer-decoration {
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
+}
+
+.social-item a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+.social-item a:hover,
+.social-item a:focus {
+  opacity: 1;
+}
+
+.social-item a:active {
+  opacity: 0.1;
+}
+
+.social-item.facebook a {
+  background-image: url("../img/fb.svg");
+}
+
+.social-item.instagram a {
+  background-image: url("../img/instagram.svg");
+}
+
+.social-item.twitter a {
+  background-image: url("../img/twitter.svg");
+}
+
+.htmlacademy-icon {
+  display: block;
+  width: 27px;
+  height: 35px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../img/logo-html.svg");
+}
+
+.htmlacademy-icon:hover,
+.htmlacademy-icon:focus {
+  opacity: 0.6;
+}
+
+.htmlacademy-icon:active {
+  opacity: 0.3;
+}
+
+/* Здесь будут стили для поп-апов */
+
+.form-modal,
+.map-modal {
+  display: none;
+}
+
+/* Стили catalog.html */
+
+.page-main-title {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  color: #000000;
+}
+
+.breadcrumbs,
+.filter-list,
+.sorting-special-list,
+.sorting-up-down-list,
+.pagination {
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumbs-item a {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-item a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filter,
+.goods-sorting {
+  background-color: #ebebeb;
+}
+
+.filter h2,
+.goods p {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter h2 {
+  background-color: #d9d9d9;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.86;
+  letter-spacing: 0.14px;
+}
+
+.filter-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+}
+
+.sorting-special-item a {
+  font-size: 14px;
+  line-height: 1.29;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-special-item a:hover,
+.sorting-special-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-special-item a:active,
+.sorting-special-item.active a {
+  color: #000000;
+}
+
+.item-title h1 {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  color: #000000;
+}
+
+.item-price {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.16px;
+  text-align: right;
+  color: #464646;
+}
+
+.item-hover-button {
+  width: 200px;
+}
+
+.item-hover-link {
+  line-height: 2.77;
+  letter-spacing: 0.13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pagination {
+  background-color: #ebebeb;
+}
+
+.pagination-item a {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.pagination-item a.prev,
+.pagination-item a.next,
+.pagination-item.active a{
+  color: #000000;
+}
+
+.pagination-item a.prev:hover,
+.pagination-item a.next:hover,
+.pagination-item a.prev:focus,
+.pagination-item a.next:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-item a.prev:active,
+.pagination-item a.next:active {
+  color: rgba(0, 0, 0, 0.3);
+}

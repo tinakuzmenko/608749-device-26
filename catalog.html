@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="page">
@@ -12,8 +13,9 @@
   </a>
   <div class="header-top-row">
     <form action="https://echo.htmlacademy.ru" method="get">
-      <input type="search" id="search-form" aria-label="Поиск по магазину">
-      <button type="submit">Найти</button>
+        <input class="search-input" type="search" id="search-form" aria-label="Поиск по сайту"
+               placeholder="Поиск по сайту">
+        <button class="search-button" type="submit">Найти</button>
     </form>
     <ul class="user-block-list">
       <li class="user-block-item">
@@ -35,7 +37,8 @@
       <li class="nav-item"><a href="" aria-haspopup="true">Каталог товаров</a>
         <ul class="dropdown-list">
           <li class="dropdown-item"><a href="">Виртуальная реальность</a></li>
-          <li class="dropdown-item" aria-current="page"><a><span class="visually-hidden">Текущий пункт:</span>Моноподы для селфи</a></li>
+          <li class="dropdown-item" aria-current="page"><a><span class="visually-hidden">Текущий пункт:</span>Моноподы
+            для селфи</a></li>
           <li class="dropdown-item"><a href="">Экшн-камеры</a></li>
           <li class="dropdown-item"><a href="">Фитнес-браслеты</a></li>
           <li class="dropdown-item"><a href="">Умные часы</a></li>
@@ -67,34 +70,34 @@
         </fieldset>
         <fieldset class="color">
           <legend>Цвет</legend>
-          <ul>
-            <li><input type="checkbox" id="black" name="item-black"><label for="black">Черный</label></li>
-            <li><input type="checkbox" id="white" name="item-white"><label for="white">Белый</label></li>
-            <li><input type="checkbox" id="blue" name="item-blue"><label for="blue">Синий</label></li>
-            <li><input type="checkbox" id="red" name="item-red"><label for="red">Красный</label></li>
-            <li><input type="checkbox" id="pink" name="item-pink"><label for="pink">Розовый</label></li>
+          <ul class="filter-list">
+            <li class="filter-item"><input type="checkbox" id="black" name="item-black"><label for="black">Черный</label></li>
+            <li class="filter-item"><input type="checkbox" id="white" name="item-white"><label for="white">Белый</label></li>
+            <li class="filter-item"><input type="checkbox" id="blue" name="item-blue"><label for="blue">Синий</label></li>
+            <li class="filter-item"><input type="checkbox" id="red" name="item-red"><label for="red">Красный</label></li>
+            <li class="filter-item"><input type="checkbox" id="pink" name="item-pink"><label for="pink">Розовый</label></li>
           </ul>
         </fieldset>
         <fieldset class="bluetooth">
           <legend>Bluetooth</legend>
-          <ul>
-            <li>
+          <ul class="filter-list">
+            <li class="filter-item">
               <input type="radio" id="with-bluetooth" name="bluetooth" value="yes" checked>
               <label for="with-bluetooth">Есть</label>
             </li>
-            <li>
+            <li class="filter-item">
               <input type="radio" id="without-bluetooth" name="bluetooth" value="no">
               <label for="without-bluetooth">Нет</label></li>
           </ul>
         </fieldset>
-        <input class="button" type="submit" value="Показать">
+        <button class="button filter-button" type="submit">Показать</button>
       </form>
     </section>
     <section class="goods">
       <div class="goods-sorting">
         <p class="goods-sorting-title">Сортировка:</p>
         <ul class="sorting-special-list">
-          <li class="sorting-special-item">
+          <li class="sorting-special-item active">
             <a href="">По цене</a>
           </li>
           <li class="sorting-special-item">
@@ -125,8 +128,8 @@
             <span class="item-price">500 руб.</span>
           </div>
           <div class="item-hover-block">
-            <a href="">В корзину</a>
-            <a href="">Добавить к сравнению</a>
+            <a class="button item-hover-button" href="">В корзину</a>
+            <a class="item-hover-link" href="">Добавить к сравнению</a>
           </div>
         </article>
         <article class="goods-item">
@@ -141,8 +144,8 @@
           </div>
 
           <div class="item-hover-block">
-            <a href="">В корзину</a>
-            <a href="">Добавить к сравнению</a>
+            <a class="button item-hover-button" href="">В корзину</a>
+            <a class="item-hover-link" href="">Добавить к сравнению</a>
           </div>
         </article>
         <article class="goods-item">
@@ -156,8 +159,8 @@
             <span class="item-price">2 500 руб.</span>
           </div>
           <div class="item-hover-block">
-            <a href="">В корзину</a>
-            <a href="">Добавить к сравнению</a>
+            <a class="button item-hover-button" href="">В корзину</a>
+            <a class="item-hover-link" href="">Добавить к сравнению</a>
           </div>
         </article>
         <article class="goods-item new">
@@ -171,8 +174,8 @@
             <span class="item-price">4 900 руб.</span>
           </div>
           <div class="item-hover-block">
-            <a href="">В корзину</a>
-            <a href="">Добавить к сравнению</a>
+            <a class="button item-hover-button" href="">В корзину</a>
+            <a class="item-hover-link" href="">Добавить к сравнению</a>
           </div>
         </article>
       </div>
@@ -191,9 +194,9 @@
 
 <footer class="page-footer">
   <div class="footer-top-row">
-    <div class="footer-logotype" aria-label="Переход на главную страницу магазина">
-      <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
-    </div>
+    <a class="footer-logotype" aria-label="Переход на главную страницу магазина">
+      <img src="img/logo--yellow.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
+    </a>
     <ul class="footer-user-block">
       <li class="footer-user-block-item">
         <div class="footer-login-wrapper">
@@ -227,7 +230,8 @@
       <li class="social-item instagram"><a href="" aria-label="Магазин Device в Instagram">Instagram</a></li>
       <li class="social-item twitter"><a href="" aria-label="Магазин Device в Twitter">Twitter</a></li>
     </ul>
-    <a class="htmlacademy-icon" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Ссылка на HTML Academy">HTML Academy</a>
+    <a class="htmlacademy-icon" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+       aria-label="Ссылка на HTML Academy">HTML Academy</a>
   </div>
 </footer>
 
