@@ -64,6 +64,10 @@ a {
 
 /* Стилизация index.html и общих блоков сайта */
 
+.page {
+  padding-top: 40px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -110,6 +114,12 @@ a {
 
 .button:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 20px;
 }
 
 .page-header {
