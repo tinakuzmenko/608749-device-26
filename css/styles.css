@@ -124,6 +124,14 @@ a {
 
 .page-header {
   background-color: rgba(240, 192, 48, 0.50);
+  position: relative;
+  padding: 28px 60px;
+}
+
+.logotype {
+  position: absolute;
+  left: 60px;
+  top: -20px;
 }
 
 .logotype:not(.index):hover,
@@ -133,6 +141,12 @@ a {
 
 .logotype:not(.index):active {
   opacity: 0.3;
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .search-input {
@@ -189,6 +203,24 @@ a {
 .social-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.user-block-list,
+.nav-list {
+  display: flex;
+}
+
+.user-block-item {
+  margin-right: 40px;
+}
+
+.user-block-item:last-child {
+  margin-right: 0;
+}
+
+.nav-list {
+  justify-content: space-between;
 }
 
 .user-block-item a,
@@ -233,6 +265,35 @@ a {
   letter-spacing: 0.15px;
 }
 
+.slider-inner {
+  position: relative;
+  padding: 0 20px;
+}
+
+.slider-inner::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1160px;
+  height: 130px;
+  left: 20px;
+  top: 0;
+  background-color: rgba(240, 192, 48, 0.50);
+  z-index: -1;
+}
+
+.slide-controls {
+  position: absolute;
+  top: 350px;
+  right: 70px;
+  outline: 1px solid red;
+  z-index: 10;
+}
+
+.slider-item {
+  display: flex;
+}
+
 .slide-title {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
@@ -250,6 +311,18 @@ a {
   width: 220px;
 }
 
+.slide-details {
+  display: flex;
+}
+
+.slide-details-item {
+  margin-right: 80px;
+}
+
+.slide-details-item:last-child {
+  margin-right: 0;
+}
+
 .slide-details dt {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 36px;
@@ -265,6 +338,15 @@ a {
   line-height: 1.54;
   letter-spacing: 0.13px;
   color: #464646;
+}
+
+.categories {
+  padding-bottom: 80px;
+}
+
+.categories-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .categories-item-link {
@@ -323,6 +405,24 @@ a {
 
 .conditions {
   background-color: #e5e5e5;
+  position: relative;
+}
+
+.conditions::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.conditions-inner {
+  padding-bottom: 50px;
+  display: flex;
 }
 
 .conditions-control-button {
@@ -344,6 +444,10 @@ a {
   display: none;
 }
 
+.conditions-wrapper {
+  z-index: 10;
+}
+
 .conditions-slide h2 {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
@@ -355,6 +459,15 @@ a {
 .conditions-slide p {
   letter-spacing: 0.15px;
   color: #464646;
+}
+
+.brands {
+  padding: 90px 0;
+}
+
+.brands-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .brands-item-link {
@@ -401,6 +514,12 @@ a {
 .brands-item-link.vive:hover,
 .brands-item-link.vive:focus {
   background-image: url("../img/logo-4.png");
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 90px;
 }
 
 .about-us h2,
@@ -467,6 +586,15 @@ a {
 
 .page-footer {
   background-color: #464646;
+  padding-top: 65px;
+  padding-bottom: 80px;
+}
+
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .footer-logotype:not(.index):hover,
@@ -481,6 +609,20 @@ a {
 .page-footer a,
 .footer-paragraph {
   color: #ffffff;
+  margin: 0;
+}
+
+.footer-user-block {
+  display: flex;
+  margin: 0;
+}
+
+.footer-user-block-item {
+  margin-right: 44px;
+}
+
+.footer-user-block-item:last-child {
+  margin-right: 0;
 }
 
 .footer-user-block-item a {
@@ -494,6 +636,25 @@ a {
 
 .footer-user-block-item a:active {
   opacity: 0.3;
+}
+
+.footer-middle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 70px;
+}
+
+.footer-nav-list {
+  display: flex;
+}
+
+.footer-nav-item {
+  margin-right: 38px;
+}
+
+.footer-nav-item:last-child {
+  margin-right: 0;
 }
 
 .footer-nav-item a {
@@ -515,10 +676,28 @@ a {
   opacity: 0.3;
 }
 
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-decoration {
   width: 80px;
   height: 7px;
   background-color: #ffc600;
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-item {
+  margin-right: 23px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
 }
 
 .social-item a {
@@ -598,6 +777,35 @@ a {
 .pagination {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.breadcrumbs-item {
+  margin-right: 40px;
+  position: relative;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 7px;
+  position: absolute;
+  top: 0.9em;
+  right: -16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../img/nav-arrow.svg");
 }
 
 .breadcrumbs-item a {
@@ -616,9 +824,24 @@ a {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.filter,
+.catalog-wrapper {
+  display: flex;
+}
+
+.filter {
+  background-color: #ebebeb;
+  padding-right: 67px;
+}
+
+.goods {
+  flex-grow: 1;
+}
+
 .goods-sorting {
   background-color: #ebebeb;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter h2,
@@ -630,10 +853,12 @@ a {
   letter-spacing: 3.2px;
   text-transform: uppercase;
   color: #000000;
+  margin: 0;
 }
 
 .filter h2 {
   background-color: #d9d9d9;
+  width: 100%;
 }
 
 .filter fieldset {
@@ -661,6 +886,19 @@ a {
   border: none;
   cursor: pointer;
   width: 200px;
+  z-index: 10;
+}
+
+.sorting-special-list {
+  display: flex;
+}
+
+.sorting-special-item {
+  margin-right: 30px;
+}
+
+.sorting-special-item:last-child {
+  margin-right: 0;
 }
 
 .sorting-special-item a {
@@ -677,6 +915,19 @@ a {
 .sorting-special-item a:active,
 .sorting-special-item.active a {
   color: #000000;
+}
+
+.sorting-up-down-list {
+  display: flex;
+}
+
+.goods-showcase {
+  padding-left: 73px;
+  padding-top: 70px;
+  padding-bottom: 77px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .item-title h1 {
@@ -711,6 +962,9 @@ a {
 
 .pagination {
   background-color: #ebebeb;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pagination-item a {
@@ -726,7 +980,7 @@ a {
 
 .pagination-item a.prev,
 .pagination-item a.next,
-.pagination-item.active a{
+.pagination-item.active a {
   color: #000000;
 }
 
