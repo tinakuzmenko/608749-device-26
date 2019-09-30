@@ -13,7 +13,7 @@
       <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
     </a>
     <div class="header-top-row">
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
         <input class="search-input" type="search" id="search-form" aria-label="Поиск по сайту"
                placeholder="Поиск по сайту">
         <button class="search-button" type="submit">Найти</button>
@@ -35,15 +35,22 @@
     </div>
     <nav class="header-nav">
       <ul class="nav-list">
-        <li class="nav-item"><a href="" aria-haspopup="true">Каталог товаров</a>
+        <li class="nav-item nav-item--catalog">
+          <a href="" aria-haspopup="true">Каталог товаров</a>
           <ul class="dropdown-list">
-            <li class="dropdown-item"><a href="">Виртуальная реальность</a></li>
-            <li class="dropdown-item" aria-current="page"><a><span class="visually-hidden">Текущий пункт:</span>Моноподы
-              для селфи</a></li>
-            <li class="dropdown-item"><a href="">Экшн-камеры</a></li>
-            <li class="dropdown-item"><a href="">Фитнес-браслеты</a></li>
-            <li class="dropdown-item"><a href="">Умные часы</a></li>
-            <li class="dropdown-item"><a href="">Квадрокоптеры</a></li>
+            <li class="dropdown-item">
+              <a href="">Виртуальная реальность</a>
+              <span class="active" aria-current="page"><span class="visually-hidden">Текущий пункт:</span>Моноподы
+                для селфи</span>
+              <a href="">Экшн-камеры</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="">Фитнес-браслеты</a>
+              <a href="">Умные часы</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="">Квадрокоптеры</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item"><a href="">Доставка</a></li>
@@ -51,11 +58,11 @@
         <li class="nav-item"><a href="">Контакты</a></li>
       </ul>
     </nav>
+  </header>
 </div>
-</header>
 
 <main class="page-content">
-  <div class="container">
+  <div class="title-wrapper container">
     <h1 class="page-main-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item"><a href="">Главная</a></li>
