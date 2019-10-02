@@ -21,14 +21,14 @@
       <ul class="user-block-list">
         <li class="user-block-item">
           <div class="login-wrapper">
-            <a href="">Войти</a>
+            <a class="login-user" href="">Войти</a>
           </div>
         </li>
         <li class="user-block-item">
-          <a href="">Сравнить</a>
+          <a class="compare" href="">Сравнить</a>
         </li>
         <li class="user-block-item">
-          <a href="">Корзина</a>
+          <a class="basket" href="">Корзина</a>
         </li>
       </ul>
     </div>
@@ -51,9 +51,9 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item"><a href="">Доставка</a></li>
+        <li class="nav-item nav-item--delivery"><a href="">Доставка</a></li>
         <li class="nav-item"><a href="">Гарантия</a></li>
-        <li class="nav-item"><a href="">Контакты</a></li>
+        <li class="nav-item nav-item--contacts"><a href="">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -120,7 +120,7 @@
           <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
         </div>
         <div class="content-wrap">
-          <p class="slide-title">Порхает как бабочка,<br> жалит как пчела!</p>
+          <p class="slide-title">Порхает как бабочка, жалит как пчела!</p>
           <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="button slide-button" href="">Подробнее</a>
@@ -157,7 +157,7 @@
             <div class="categories-item-wrapper categories-item-wrapper--monopods">
               <img class="categories-item-img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
             </div>
-            <p>Моноподы для селфи</p>
+            <p>Моноподы<br> для селфи</p>
           </a>
         </li>
         <li class="categories-item">
@@ -211,19 +211,19 @@
         </li>
       </ul>
       <div class="conditions-wrapper">
-        <div class="conditions-slide delivery">
+        <div class="conditions-slide delivery active">
           <h2>Доставка</h2>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем,
             поднимая его на ваш этаж.</p>
         </div>
-        <div class="conditions-slide warranty" style="display: none;">
+        <div class="conditions-slide warranty">
           <h2>Гарантия</h2>
-          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
             Товар,
             не дом, конечно же.</p>
         </div>
-        <div class="conditions-slide credit" style="display: none;">
+        <div class="conditions-slide credit">
           <h2>Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
             условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -256,8 +256,7 @@
     <section class="about-us">
       <h2>О нас</h2>
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
-        компаниями:</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
       <ul class="about-list">
         <li class="about-item">Деловые Линии</li>
         <li class="about-item">Автотрейдинг</li>
@@ -273,7 +272,7 @@
         бывает.</p>
       <a class="contacts-map" href="" aria-haspopup="true">
         <img src="img/map.jpg" alt="Карта проезда к магазину Device по адресу Москва, улица Строителей, 15"
-             width="560px" height="222px">
+             width="560" height="222">
       </a>
       <a class="button contacts-button" href="" aria-haspopup="true">Напишите нам</a>
     </section>
@@ -288,14 +287,23 @@
       <ul class="footer-user-block">
         <li class="footer-user-block-item">
           <div class="footer-login-wrapper">
-            <a href="">Войти</a>
+            <a href="">
+              <span class="footer-user-block-icon footer-login-user"></span>
+              <span class="footer-user-block-text">Войти</span>
+            </a>
           </div>
         </li>
         <li class="footer-user-block-item">
-          <a href="">Сравнить</a>
+          <a href="">
+            <span class="footer-user-block-icon footer-compare"></span>
+            <span class="footer-user-block-text">Сравнить</span>
+          </a>
         </li>
         <li class="footer-user-block-item">
-          <a href="">Корзина</a>
+          <a href="">
+            <span class="footer-user-block-icon footer-basket"></span>
+            <span class="footer-user-block-text">Корзина</span>
+          </a>
         </li>
       </ul>
     </div>
