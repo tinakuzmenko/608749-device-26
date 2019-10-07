@@ -1364,8 +1364,41 @@ a {
 
 .sorting-up-down-list {
   display: flex;
+  align-items: center;
   margin-left: auto;
   margin-top: -4px;
+  vertical-align: top;
+  flex-shrink: 0;
+  font-size: 0;
+}
+
+.sorting-up-down-item a {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  display: inline-block;
+  opacity: 0.2;
+}
+
+.sorting-up-down-item a:hover,
+.sorting-up-down-item a:focus {
+  opacity: 0.4;
+}
+
+.sorting-up-down-item a:active,
+.sorting-up-down-item .active {
+  opacity: 1;
+}
+
+.sorting-up-down-item .up {
+  border-bottom: 10px solid #000000;
+  margin-right: 20px;
+  margin-top: -2px;
+}
+
+.sorting-up-down-item .down {
+  border-top: 10px solid #000000;
+  margin-top: 8px;
 }
 
 .goods-showcase {
