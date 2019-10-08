@@ -1413,12 +1413,61 @@ a {
 .goods-item {
   width: 360px;
   margin-bottom: 48px;
+  cursor: pointer;
+  position: relative;
+}
+
+.goods-item.new {
+  position: relative;
+}
+
+.goods-item.new::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: 27px;
+  width: 61px;
+  height: 61px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.goods-item.new::after {
+  content: "New";
+  position: absolute;
+  top: 47px;
+  right: 40px;
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.71;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .item-image-wrap {
   display: flex;
   margin-bottom: 30px;
   background-color: #ebebeb;
+}
+
+.item-hover-block {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  height: 380px;
+  left: 0;
+  top: 0;
+  background-color: rgba(238, 238, 238, 0.7);
+  z-index: 50;
+}
+
+.goods-item:hover > .item-hover-block {
+  display: flex;
 }
 
 .item-description {
@@ -1451,6 +1500,9 @@ a {
 
 .item-hover-button {
   width: 200px;
+  z-index: 20;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .item-hover-block {
@@ -1458,10 +1510,20 @@ a {
 }
 
 .item-hover-link {
+  font-size: 13px;
   line-height: 2.77;
   letter-spacing: 0.13px;
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.item-hover-link:hover,
+.item-hover-link:focus {
+  color: #000000;
+}
+
+.item-hover-link:active {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .pagination {
