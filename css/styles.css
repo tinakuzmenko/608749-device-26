@@ -1315,11 +1315,81 @@ a {
   background-color: #000000;
 }
 
+.filter-item input[type="checkbox"],
+.filter-item input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
 .filter-item label {
   font-size: 14px;
   font-weight: 300;
   line-height: 2.86;
   letter-spacing: 0.14px;
+  cursor: pointer;
+  padding-left: 41px;
+  position: relative;
+}
+
+.filter-item label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filter-item input[type="checkbox"] + label::before {
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-item input[type="checkbox"]:checked + label::before {
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-item input[type="radio"] + label::before {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+}
+
+.filter-item input[type="radio"]:checked + label::before {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter-item input[type="checkbox"]:not(:disabled):hover + label::before,
+.filter-item input[type="radio"]:not(:disabled):hover + label::before {
+  opacity: 0.6;
+}
+
+.filter-item input[type="checkbox"]:active + label::before,
+.filter-item input[type="radio"]:active + label::before {
+  opacity: 1;
+}
+
+.filter-item input[type="checkbox"]:focus + label,
+.filter-item input[type="radio"]:focus + label {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.filter-item input[type="checkbox"]:disabled + label,
+.filter-item input[type="radio"]:disabled + label {
+  opacity: 0.25;
+  cursor: auto;
 }
 
 .filter-button {
