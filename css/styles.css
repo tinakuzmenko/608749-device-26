@@ -56,7 +56,6 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 a {
@@ -521,6 +520,7 @@ a {
 }
 
 .slide-description {
+  padding-right: 75px;
   letter-spacing: 0.15px;
   color: #464646;
   margin-bottom: 47px;
@@ -588,6 +588,10 @@ a {
   font-weight: 800;
   line-height: 1.33;
   letter-spacing: 0.18px;
+}
+
+.categories-item-wrapper--monopods + p {
+  padding-right: 40px;
 }
 
 .categories-item-wrapper {
@@ -675,11 +679,13 @@ a {
   width: 160px;
 }
 
-.conditions-control-button.active {
+.conditions-control-button.active,
+.conditions-control-button:active {
   color: #f7e184;
 }
 
-.conditions-control-button.active::before {
+.conditions-control-button.active::before,
+.conditions-control-button:active::before {
   background-color: #000000;
   top: 0;
   height: 40px;
@@ -1290,7 +1296,7 @@ a {
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .filter legend {
@@ -1300,7 +1306,7 @@ a {
   line-height: 1.33;
   letter-spacing: 0.18px;
   padding-top: 13px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -1313,6 +1319,15 @@ a {
   width: 201px;
   height: 2px;
   background-color: #000000;
+}
+
+.filter-list {
+  margin-top: -6px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
 }
 
 .filter-item input[type="checkbox"],
@@ -1340,7 +1355,7 @@ a {
 .filter-item label::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: 7px;
   left: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -1399,6 +1414,85 @@ a {
   cursor: pointer;
   width: 200px;
   z-index: 10;
+}
+
+.range-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 22px;
+  border-radius: 5px;
+  max-width: 196px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: #dbdbdb;
+}
+
+.range-controls .bar {
+  height: 2px;
+  background-color: #91c92f;
+}
+
+.range-controls .toggle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: #ababab;
+  border: 8px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle:active {
+  width: 22px;
+  height: 22px;
+  border: 9px solid white;
+  top: -1px;
+}
+
+.range-controls .min-toggle {
+  left: -5px;
+}
+
+.range-controls .max-toggle {
+  left: 107px;
+}
+
+.price-controls {
+  display: flex;
+  align-items: start;
+}
+
+.price-controls label {
+  display: flex;
+  font-size: 14px;
+  margin-top: -2px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls input {
+  border: none;
+  margin-left: 3px;
+  background: transparent;
+  max-width: 60px;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.min-price {
+  margin-right: 12px;
 }
 
 .sorting-special-list {
@@ -1518,6 +1612,7 @@ a {
 
 .item-image-wrap {
   display: flex;
+  flex-grow: 0;
   margin-bottom: 30px;
   background-color: #ebebeb;
 }
@@ -1553,8 +1648,11 @@ a {
   line-height: 1.33;
   letter-spacing: 0.18px;
   color: #000000;
-  word-wrap: normal;
   margin: 0;
+}
+
+.nobr {
+  white-space: nowrap;
 }
 
 .item-price {
@@ -1624,7 +1722,7 @@ a {
 }
 
 .page-number {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .page-number--last {

@@ -78,24 +78,39 @@
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="range-filter">
             <legend>Стоимость</legend>
-            <!-- Здесь будет кастомный range для фильтра стоимости -->
+
+            <div class="range-wrapper">
+              <div class="range-controls">
+                <div class="scale">
+                  <div style="width: 57%" class="bar"></div>
+                </div>
+                <button class="toggle min-toggle" type="button" aria-label="Указатель минимальной цены"></button>
+                <button class="toggle max-toggle" type="button" aria-label="Указатель максимальной цены"></button>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+              </div>
+            </div>
+
           </fieldset>
           <fieldset class="color">
             <legend>Цвет</legend>
             <ul class="filter-list">
               <li class="filter-item">
-                <input type="checkbox" id="black" name="item-black">
-                <label for="black">Черный</label></li>
+                <input type="checkbox" id="black" name="item-black" checked>
+                <label for="black">Черный</label>
+              </li>
               <li class="filter-item">
                 <input type="checkbox" id="white" name="item-white">
                 <label for="white">Белый</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" id="blue" name="item-blue">
+                <input type="checkbox" id="blue" name="item-blue" checked>
                 <label for="blue">Синий</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" id="red" name="item-red">
+                <input type="checkbox" id="red" name="item-red" checked>
                 <label for="red">Красный</label>
               </li>
               <li class="filter-item">
@@ -164,7 +179,7 @@
             </div>
             <div class="item-description">
               <a class="item-title" href="">
-                <h1>Профессиональная<br> селфи-палка</h1>
+                <h1>Профессиональная <span class="nobr">селфи-палка</span></h1>
               </a>
               <span class="item-price">1 500 руб.</span>
             </div>
@@ -180,7 +195,7 @@
             </div>
             <div class="item-description">
               <a class="item-title" href="">
-                <h1>Непотопляемая селфи-палка</h1>
+                <h1>Непотопляемая <span class="nobr">селфи-палка</span></h1>
               </a>
               <span class="item-price">2 500 руб.</span>
             </div>
