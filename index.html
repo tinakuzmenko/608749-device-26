@@ -66,12 +66,12 @@
     <div class="slider-inner container">
       <h2 class="visually-hidden">Популярные товары</h2>
       <div class="slide-controls">
-        <button class="slide-control active" aria-label="Переключатель слайдера"></button>
-        <button class="slide-control" aria-label="Переключатель слайдера"></button>
-        <button class="slide-control" aria-label="Переключатель слайдера"></button>
+        <button class="slide-control active" aria-label="Переключатель слайдера" id="slide-control-1" data-number="1"></button>
+        <button class="slide-control" aria-label="Переключатель слайдера" id="slide-control-2" data-number="2"></button>
+        <button class="slide-control" aria-label="Переключатель слайдера" id="slide-control-3" data-number="3"></button>
       </div>
 
-      <div class="slider-item active" data-number="01">
+      <div class="slider-item active" id="slide-1" data-number="01">
         <div class="image-wrap">
           <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
         </div>
@@ -97,7 +97,7 @@
         </div>
       </div>
 
-      <div class="slider-item" data-number="02">
+      <div class="slider-item" id="slide-2" data-number="02">
         <div class="image-wrap">
           <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
         </div>
@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <div class="slider-item" data-number="03">
+      <div class="slider-item" id="slide-3" data-number="03">
         <div class="image-wrap">
           <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
         </div>
@@ -201,29 +201,29 @@
       <h2 class="visually-hidden">Условия сотрудничества</h2>
       <ul class="conditions-controls-list">
         <li class="conditions-control">
-          <button class="button conditions-control-button active" type="button">Доставка</button>
+          <button class="button conditions-control-button active" type="button" id="conditions-control-1" data-number="1">Доставка</button>
         </li>
         <li class="conditions-control">
-          <button class="button conditions-control-button" type="button">Гарантия</button>
+          <button class="button conditions-control-button" type="button" id="conditions-control-2" data-number="2">Гарантия</button>
         </li>
         <li class="conditions-control">
-          <button class="button conditions-control-button" type="button">Кредит</button>
+          <button class="button conditions-control-button" type="button" id="conditions-control-3" data-number="3">Кредит</button>
         </li>
       </ul>
       <div class="conditions-wrapper">
-        <div class="conditions-slide delivery active">
+        <div class="conditions-slide delivery active" id="conditions-slide-1">
           <h2>Доставка</h2>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем,
             поднимая его на ваш этаж.</p>
         </div>
-        <div class="conditions-slide warranty">
+        <div class="conditions-slide warranty" id="conditions-slide-2">
           <h2>Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
             Товар,
             не дом, конечно же.</p>
         </div>
-        <div class="conditions-slide credit">
+        <div class="conditions-slide credit" id="conditions-slide-3">
           <h2>Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
             условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -363,5 +363,8 @@
     <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу ул. Строителей, 15, Москва">
   </div>
 </section>
+
+<script src="js/sliders.js"></script>
+
 </body>
 </html>
