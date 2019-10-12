@@ -44,3 +44,4 @@ function sliderToggle(
     eventTarget.classList.add("active");
     sliderItem.classList.add("active");
   }
+}
