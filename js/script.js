@@ -64,7 +64,7 @@ window.addEventListener("keydown", function (closeForm) {
     if (formModal.classList.contains("modal-show")) {
       formModal.classList.remove("modal-show");
       if (formModal.classList.contains("modal-error")){
-        formModal.classList.add("modal-error");
+        formModal.classList.remove("modal-error");
       }
     }
     if (mapModal.classList.contains("modal-show")) {
