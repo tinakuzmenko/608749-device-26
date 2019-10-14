@@ -1757,7 +1757,6 @@ a {
 }
 
 /* Модальные окна */
-
 .form-modal,
 .map-modal {
   flex-direction: column;
@@ -1909,7 +1908,45 @@ a {
   border: none;
 }
 
+@keyframes modal-appearance {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .form-modal.modal-show,
 .map-modal.modal-show {
   display: flex;
+  animation: modal-appearance 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.form-modal.modal-error {
+  animation: shake 0.6s ease-in both;
 }
