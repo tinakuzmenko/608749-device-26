@@ -1,7 +1,7 @@
 var sliderContainer = document.querySelector(".slide-controls");
 var conditionsContainer = document.querySelector(".conditions-controls-list");
 
-sliderContainer.addEventListener('click', function(event) {
+sliderContainer.addEventListener("click", function(event) {
   sliderToggle(
     event,
     ".slider-item.active",
@@ -11,7 +11,7 @@ sliderContainer.addEventListener('click', function(event) {
   );
 });
 
-conditionsContainer.addEventListener('click', function(event) {
+conditionsContainer.addEventListener("click", function(event) {
   sliderToggle(
     event,
     ".conditions-slide.active",
