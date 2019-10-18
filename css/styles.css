@@ -861,7 +861,6 @@ a {
 
 .brands-item-link {
   display: block;
-  font-size: 0;
   width: 260px;
   height: 100px;
   background-repeat: no-repeat;
@@ -869,8 +868,10 @@ a {
   background-size: contain;
 }
 
-.brands-item-link.dji {
-  background-image: url("../img/logo-1--inactive.png");
+.brands-item-link img {
+  display: block;
+  width: 260px;
+  height: 100px;
 }
 
 .brands-item-link.dji:hover,
@@ -878,26 +879,14 @@ a {
   background-image: url("../img/logo-1.png");
 }
 
-.brands-item-link.spg {
-  background-image: url("../img/logo-2--inactive.png");
-}
-
 .brands-item-link.spg:hover,
 .brands-item-link.spg:focus {
   background-image: url("../img/logo-2.png");
 }
 
-.brands-item-link.gopro {
-  background-image: url("../img/logo-3--inactive.png");
-}
-
 .brands-item-link.gopro:hover,
 .brands-item-link.gopro:focus {
   background-image: url("../img/logo-3.png");
-}
-
-.brands-item-link.vive {
-  background-image: url("../img/logo-4--inactive.png");
 }
 
 .brands-item-link.vive:hover,
@@ -1265,7 +1254,7 @@ a {
 .filter-list,
 .sorting-special-list,
 .sorting-up-down-list,
-.pagination {
+.pagination-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1895,7 +1884,14 @@ a {
   margin-left: 73px;
 }
 
-.pagination-item a {
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination-item a,
+.pagination-control {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -1905,39 +1901,41 @@ a {
   text-transform: uppercase;
 }
 
-.pagination-item.prev {
+.pagination-control {
+  color: #000000;
+}
+
+.pagination-control.prev {
   margin-right: auto;
 }
 
-.pagination-item.next {
+.pagination-control.next {
   margin-left: auto;
 }
 
-.page-number {
+.pagination-item {
   margin-right: 25px;
 }
 
-.page-number:nth-last-child(2) {
+.pagination-item:last-child {
   margin-right: 0;
 }
 
-.page-number a {
+.pagination-item a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.page-number a:hover,
-.page-number a:focus {
+.pagination-item a:hover,
+.pagination-item a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.page-number a:active,
-.pagination-item:not(.page-number) a,
+.pagination-item a:active,
 .pagination-item.active a {
   color: #000000;
 }
 
-.pagination-item.prev a,
-.pagination-item.next a {
+.pagination-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1945,15 +1943,12 @@ a {
   padding: 23px 30px;
 }
 
-.pagination-item.prev a:hover,
-.pagination-item.next a:hover,
-.pagination-item.prev a:focus,
-.pagination-item.next a:focus {
+.pagination-control:hover,
+.pagination-control:focus {
   background-color: #d9d9d9;
 }
 
-.pagination-item.prev a:active,
-.pagination-item.next a:active {
+.pagination-control:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
