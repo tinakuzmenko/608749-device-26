@@ -4530,7 +4530,7 @@ background-color: #ffc600;
   40%,
   60%,
   80% {
-    -webkit-transform: git cotranslateX(10px);
+    -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
 }
