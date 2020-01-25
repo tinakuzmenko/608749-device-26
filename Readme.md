@@ -3,7 +3,7 @@
 * Студент: [Kristina Kuzmenko](https://up.htmlacademy.ru/htmlcss/26/user/608749).
 * Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout).
 
-* [Онлайн версия](https://tinakuzmenko.github.io/608749-device-26/).
+* [Онлайн версия](https://tinakuzmenko.github.io/htmlacademy-device/).
 
 ---
 
